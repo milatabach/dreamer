@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dreamer — Visualize Your Dream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="glow glow--one"></div>
+      <div class="glow glow--two"></div>
+      <div class="glow glow--three"></div>
+    </div>
+
+    <main class="layout">
+      <section class="hero">
+        <span class="tag">Dreamer</span>
+        <div class="dream-frame">
+          <div class="dream-frame__placeholder">
+            <span>Image will appear here</span>
+          </div>
+          <img
+            id="dreamImageLeft"
+            src=""
+            alt="Generated dream preview"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section class="chat">
+        <header class="chat__header">
+          <div>
+            <h2>Dreamer</h2>
+            <span>Whispering dream companion</span>
+          </div>
+          <button class="ghost" id="reset">Start over</button>
+        </header>
+
+        <div class="chat__window" id="chatWindow"></div>
+
+        <div class="dream-output" id="dreamOutput" aria-live="polite">
+          <div class="dream-output__text">
+            <h3>Your dream lantern</h3>
+            <p id="dreamPrompt">Share a dream to invite an image.</p>
+          </div>
+          <div class="dream-output__image">
+            <img
+              id="dreamImage"
+              src=""
+              alt="Generated dream preview"
+              loading="lazy"
+            />
+          </div>
+        </div>
+
+        <form class="chat__input" id="chatForm">
+          <input
+            type="text"
+            id="userInput"
+            placeholder="Describe the dream you're sensing..."
+            autocomplete="off"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
